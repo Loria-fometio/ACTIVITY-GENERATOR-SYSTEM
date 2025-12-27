@@ -10,6 +10,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK', service: 'user-service' });
+});
+
 // Routes
 app.use('/api/users', userRoutes);
 
