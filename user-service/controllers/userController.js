@@ -1,4 +1,4 @@
-const User = require('../models/user');
+ onst User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -11,11 +11,11 @@ const getUsers = async (req, res) => {
   }
 };
 
-const createUser = async (req, res) => {
+const createUser = async (req, res) => { 
   try {
     const { name, email, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = await User.create({ name, email, password: hashedPassword });
+    const newUser = await User.create({ name, email, password_hash: hashedPassword });
     res.status(201).json({ message: 'User created successfully', user: { id: newUser.id, name: newUser.name, email: newUser.email } });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -29,7 +29,7 @@ const loginUser = async (req, res) => {
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isPasswordValid = await bcrypt.compare(password, user.password_hash);
     if (!isPasswordValid) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
@@ -42,7 +42,7 @@ const loginUser = async (req, res) => {
 
 const getProfile = async (req, res) => {
   try {
-    const user = await User.findByPk(req.user.id, { attributes: { exclude: ['password'] } });
+    const user = await User.findByPk(req.user.id, { attributes: { exclude: ['password_hash'] } });
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
@@ -52,4 +52,6 @@ const getProfile = async (req, res) => {
   }
 };
 
-module.exports = { getUsers, createUser, loginUser, getProfile };
+module.exports = { getUsers, createUser, loginUser, getProfile };  
+}
+}

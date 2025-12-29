@@ -16,9 +16,21 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true,
   },
-  password: {
+  password_hash: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  goal: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  skill_level: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  available_time: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
   },
   createdAt: {
     type: DataTypes.DATE,

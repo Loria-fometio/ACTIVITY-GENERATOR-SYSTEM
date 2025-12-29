@@ -4,6 +4,7 @@ const { getUsers, createUser, loginUser, getProfile } = require('../controllers/
 const { authenticateToken } = require('../middleware/authMiddleware');
 
 router.get('/', authenticateToken, getUsers);
+router.get('/all', getUsers); // Temporary route without auth for testing
 router.post('/', createUser);
 router.post('/login', loginUser);
 router.get('/profile', authenticateToken, getProfile);
