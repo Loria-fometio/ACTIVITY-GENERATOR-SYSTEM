@@ -21,7 +21,7 @@ app.use('/api/users', userRoutes);
 // Sync database and start server
 const startServer = async () => {
   try {
-        await sequelize.sync({ force: false }); // Set force: true to drop and recreate tables
+        await sequelize.sync({ alter: true }); // Alter tables to match models
     console.log('Database synchronized successfully.');
 
     app.listen(PORT, () => {
