@@ -1,0 +1,2 @@
+# ACTIVITY-GENERATOR-SYSTEM
+Course project API
