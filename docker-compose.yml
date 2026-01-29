@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  timetable-db:
+    image: postgres:15-alpine
+    container_name: timetable-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME:-timetable_db}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - timetable-data:/var/lib/postgresql/data
+    networks:
+      - activity-network
+
+  timetable-service:
+    build: .
+    container_name: timetable-service
+    depends_on:
+      - timetable-db
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - PORT=${PORT:-5001}
+      - DB_HOST=timetable-db
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME:-timetable_db}
+      - DB_USER=${DB_USER:-postgres}
+      - DB_PASSWORD=${DB_PASSWORD:-password}
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - activity-network
+
+volumes:
+  timetable-data:
+
+networks:
+  activity-network:
+    driver: bridge

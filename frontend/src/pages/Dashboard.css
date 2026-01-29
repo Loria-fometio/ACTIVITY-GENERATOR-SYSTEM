@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  background-color: #F9FAFB;
+}
+
+/* Card animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard specific styles */
+.dashboard-card {
+  animation: fadeIn 0.3s ease-out;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Status indicators */
+.status-online {
+  background-color: #4CAF50 !important;
+}
+
+.status-offline {
+  background-color: #f44336 !important;
+}
+
+.status-pending {
+  background-color: #FF9800 !important;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2;
+}
+
+.btn-success {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #388E3C;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top-color: #2196F3;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

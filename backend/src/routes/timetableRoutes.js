@@ -6,7 +6,7 @@ let timetablesStorage = [];
 
 // GET all timetables
 router.get('/', (req, res) => {
-  console.log('GET / - Timetables in storage:', timetablesStorage.length);
+  console.log('📡 GET / - Timetables in storage:', timetablesStorage.length);
   res.json({
     success: true,
     message: 'All timetables',
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 // GET timetable by ID
 router.get('/:id', (req, res) => {
   const timetableId = req.params.id;
-  console.log('GET /:id - Looking for:', timetableId);
+  console.log('📡 GET /:id - Looking for:', timetableId);
   
   // Find the timetable in storage
   const timetable = timetablesStorage.find(tt => tt.timetable_id === timetableId);
@@ -45,7 +45,7 @@ router.post('/generate', (req, res) => {
     generationMethod = 'balanced'
   } = req.body;
   
-  console.log('POST /generate - Request:', { title, activitiesCount: activities.length });
+  console.log('📡 POST /generate - Request:', { title, activitiesCount: activities.length });
   
   if (!activities || activities.length === 0) {
     return res.status(400).json({
@@ -87,7 +87,7 @@ router.post('/generate', (req, res) => {
   
   // STORE THE TIMETABLE IN MEMORY
   timetablesStorage.push(timetable);
-  console.log('Timetable stored. Total:', timetablesStorage.length);
+  console.log('✅ Timetable stored. Total:', timetablesStorage.length);
   
   res.status(201).json({
     success: true,
@@ -101,7 +101,7 @@ router.patch('/activity/:id/complete', (req, res) => {
   const activityId = req.params.id;
   const { rating, notes } = req.body;
   
-  console.log('PATCH /activity/:id/complete - Activity:', activityId);
+  console.log('📡 PATCH /activity/:id/complete - Activity:', activityId);
   
   res.json({
     success: true,
