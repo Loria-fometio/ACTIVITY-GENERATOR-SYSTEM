@@ -1,13 +1,16 @@
 require('dotenv').config();
 const express = require('express');
-const sequelize = require('./config/database');
+const cors = require('cors');
+const db = require('./config/db');
 
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -22,15 +25,17 @@ app.get('/test', (req, res) => {
 app.use('/api/users', userRoutes);
 
 // Sync database and start server
+
 const startServer = async () => {
   try {
-    await sequelize.sync(); // Create tables if they don't exist
-    console.log('Database synchronized successfully.');
+    // Test database connection
+    await db.getConnection(); // gets a connection from the pool
+    console.log('Database connected successfully.');
 
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
-    console.log('Server setup complete.');
+
   } catch (error) {
     console.error('Unable to start server:', error);
   }
