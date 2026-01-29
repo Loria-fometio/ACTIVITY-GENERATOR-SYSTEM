@@ -15,7 +15,7 @@ const timetableAPI = {
   // Generate timetable
   generate: async (data) => {
     try {
-      console.log('📡 Sending generate request...');
+      console.log('Sending generate request...');
       
       const response = await fetch(`${API_BASE_URL}/generate`, {
         method: 'POST',
@@ -36,10 +36,10 @@ const timetableAPI = {
     }
   },
 
-  // ✅ ADD THIS: Get timetable by ID
+  //Get timetable by ID
   getById: async (id) => {
     try {
-      console.log(`📡 Fetching timetable with ID: ${id}`);
+      console.log(`Fetching timetable with ID: ${id}`);
       const response = await fetch(`${API_BASE_URL}/${id}`);
       
       if (!response.ok) {
@@ -53,10 +53,10 @@ const timetableAPI = {
     }
   },
 
-  // ✅ ADD THIS: Complete activity
+  // Complete activity
   completeActivity: async (activityId, data) => {
     try {
-      console.log(`📡 Completing activity: ${activityId}`);
+      console.log(`Completing activity: ${activityId}`);
       const response = await fetch(`${API_BASE_URL}/activity/${activityId}/complete`, {
         method: 'PATCH',
         headers: {
