@@ -1,0 +1,296 @@
+[
+  {
+    "title": "Dance workout",
+    "description": "Dance to upbeat songs",
+    "preference": "music",
+    "goal": "fitness"
+  },
+  {
+    "title": "Go hiking",
+    "description": "Enjoy fresh air and scenery",
+    "preference": "nature",
+    "goal": "fitness"
+  },
+  {
+    "title": "Cook a healthy meal",
+    "description": "Prepare a nutritious dish",
+    "preference": "cooking",
+    "goal": "fitness"
+  },
+  {
+    "title": "Listen to jazz",
+    "description": "Explore relaxing jazz tracks",
+    "preference": "music",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Bake bread",
+    "description": "Try a simple homemade recipe",
+    "preference": "cooking",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Gardening",
+    "description": "Plant flowers or vegetables",
+    "preference": "nature",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Practice guitar",
+    "description": "Work on chord progressions",
+    "preference": "music",
+    "goal": "learning"
+  },
+  {
+    "title": "Try a new recipe",
+    "description": "Experiment with international cuisine",
+    "preference": "cooking",
+    "goal": "learning"
+  },
+  {
+    "title": "Bird watching",
+    "description": "Observe local wildlife",
+    "preference": "nature",
+    "goal": "learning"
+  },
+  {
+    "title": "Meditation",
+    "description": "Practice deep breathing and focus",
+    "preference": "wellness",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Stretching routine",
+    "description": "Loosen muscles and relax",
+    "preference": "wellness",
+    "goal": "fitness"
+  },
+  {
+    "title": "Gratitude journaling",
+    "description": "Write down positive thoughts",
+    "preference": "wellness",
+    "goal": "mental health"
+  },
+  {
+    "title": "Play basketball",
+    "description": "Casual game with friends",
+    "preference": "sport",
+    "goal": "fitness"
+  },
+  {
+    "title": "Swimming",
+    "description": "Gentle laps in the pool",
+    "preference": "sport",
+    "goal": "fitness"
+  },
+  {
+    "title": "Yoga session",
+    "description": "Stretch and breathe",
+    "preference": "sport",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Read a science article",
+    "description": "Expand your knowledge",
+    "preference": "study",
+    "goal": "learning"
+  },
+  {
+    "title": "Solve math puzzles",
+    "description": "Sharpen problem-solving skills",
+    "preference": "study",
+    "goal": "learning"
+  },
+  {
+    "title": "Learn a new language",
+    "description": "Practice basic phrases",
+    "preference": "study",
+    "goal": "learning"
+  },
+  {
+    "title": "Plan a weekend trip",
+    "description": "Research nearby destinations",
+    "preference": "travel",
+    "goal": "exploration"
+  },
+  {
+    "title": "Virtual museum tour",
+    "description": "Explore art collections online",
+    "preference": "travel",
+    "goal": "learning"
+  },
+  {
+    "title": "Discover local landmarks",
+    "description": "Visit cultural sites nearby",
+    "preference": "travel",
+    "goal": "exploration"
+  },
+  {
+    "title": "Digital illustration",
+    "description": "Create art on tablet",
+    "preference": "art",
+    "goal": "learning"
+  },
+  {
+    "title": "Sketch nature",
+    "description": "Draw a calming nature scene",
+    "preference": "art",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Paint with watercolors",
+    "description": "Experiment with blending",
+    "preference": "art",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Play a strategy game",
+    "description": "Challenge your planning skills",
+    "preference": "gaming",
+    "goal": "mental agility"
+  },
+  {
+    "title": "Multiplayer session",
+    "description": "Connect with friends online",
+    "preference": "gaming",
+    "goal": "social"
+  },
+  {
+    "title": "Try a new indie game",
+    "description": "Explore creative gameplay",
+    "preference": "gaming",
+    "goal": "exploration"
+  },
+  {
+    "title": "Organize workspace",
+    "description": "Declutter and tidy up your desk",
+    "preference": "general",
+    "goal": "productivity"
+  },
+  {
+    "title": "Read a book",
+    "description": "Pick a relaxing novel",
+    "preference": "general",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Go for a walk",
+    "description": "Enjoy fresh air outdoors",
+    "preference": "general",
+    "goal": "fitness"
+  },
+  {
+    "title": "Photography walk",
+    "description": "Capture nature scenes",
+    "preference": "art",
+    "goal": "exploration"
+  },
+  {
+    "title": "Cooking class",
+    "description": "Learn new techniques",
+    "preference": "cooking",
+    "goal": "learning"
+  },
+  {
+    "title": "Music jam session",
+    "description": "Play instruments with friends",
+    "preference": "music",
+    "goal": "social"
+  },
+  {
+    "title": "Nature cleanup",
+    "description": "Help preserve the environment",
+    "preference": "nature",
+    "goal": "community"
+  },
+  {
+    "title": "Volunteer at shelter",
+    "description": "Support local community",
+    "preference": "general",
+    "goal": "community"
+  },
+  {
+    "title": "Podcast listening",
+    "description": "Learn from experts",
+    "preference": "study",
+    "goal": "learning"
+  },
+  {
+    "title": "Meditative coloring",
+    "description": "Color intricate mandala patterns",
+    "preference": "art",
+    "goal": "relaxation"
+  },
+  {
+    "title": "Cycling",
+    "description": "Ride through scenic routes",
+    "preference": "sport",
+    "goal": "fitness"
+  },
+  {
+    "title": "Pilates",
+    "description": "Core strengthening exercises",
+    "preference": "sport",
+    "goal": "fitness"
+  },
+  {
+    "title": "Mindfulness practice",
+    "description": "Focus on present moment",
+    "preference": "wellness",
+    "goal": "mental health"
+  },
+  {
+    "title": "Cooking for friends",
+    "description": "Host a dinner",
+    "preference": "cooking",
+    "goal": "social"
+  },
+  {
+    "title": "Songwriting",
+    "description": "Compose lyrics and melody",
+    "preference": "music",
+    "goal": "creative"
+  },
+  {
+    "title": "Nature photography",
+    "description": "Capture wildlife moments",
+    "preference": "nature",
+    "goal": "creative"
+  },
+  {
+    "title": "Art exhibition visit",
+    "description": "Explore local galleries",
+    "preference": "art",
+    "goal": "exploration"
+  },
+  {
+    "title": "Board games night",
+    "description": "Play with friends",
+    "preference": "gaming",
+    "goal": "social"
+  },
+  {
+    "title": "Coding practice",
+    "description": "Work on programming challenges",
+    "preference": "study",
+    "goal": "learning"
+  },
+  {
+    "title": "Travel blog writing",
+    "description": "Document your journeys",
+    "preference": "travel",
+    "goal": "creative"
+  },
+  {
+    "title": "Community gardening",
+    "description": "Grow plants together",
+    "preference": "nature",
+    "goal": "community"
+  },
+  {
+    "title": "Cooking experiments",
+    "description": "Invent new dishes",
+    "preference": "cooking",
+    "goal": "creative"
+  }
+]
